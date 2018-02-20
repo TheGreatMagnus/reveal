@@ -1,0 +1,166 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+<!-- Any section below this is a slide -->
+      <div class="slides">
+
+          <section>
+            <h1>Class Overview</h1>
+              <p>
+                How does class work?
+              </p>
+
+                <aside class="notes">
+                  Class will meet twice a week from now until May.  There will be in class assignments, homework assignments
+                  and projects.
+                </aside>
+
+          </section>
+
+          <section>
+            <h3>History of JavaScript<h3>
+          </section>
+
+          <section>
+            <ul>
+              <li>Udacity.com</li>
+              <li>Slack</li>
+              <li>github</li>
+              <li>cloud9.io</li>
+            </ul>
+          </section>
+
+          <section>
+              <p>What is Javascript and what can it do?</p>
+              <p class="fragment">Static vs. Dynamic sites</p>
+
+              <p class="fragment">Javascript enables you to add interactivity to your site, to make your site dynamic.</p>
+
+                            <aside class="notes">
+                              A static website contains Web pages with fixed content.
+                              Each page is coded in HTML and displays the same information to
+                              every visitor. Static sites are the most basic type of website
+                              and are the easiest to create. Unlike dynamic websites, they do not
+                              require any Web programming or database design.
+                              A static site can be built by simply creating a few HTML pages and
+                              publishing them to a Web server.
+                            </aside>
+
+
+          </section>
+
+          <section>
+            <p>Some of the things you can do with JavaScript include...</p>
+              <ul>
+                <li>Listen to events like a mouse click and do something</li>
+                <li>Modify the HTML and CSS of your page after the page has loaded</li>
+                <li>Make things move around the screen in interesting way</li>
+                <li>Communicate data between the server and the browser</li>
+              </ul>
+          </section>
+
+          <section>
+            Javascript enables you to add interactivity to your site.
+            Can be as complex as Facebook or as simple as https://isitchristmas.com/  or
+            https://findtheinvisiblecow.com/.
+          </section>
+
+          <section>
+              <p>What does it take to be successful in this class?</p>
+          </section>
+
+          <section data-background="https://i.imgur.com/dzbQCj4.png" data-background-size="800px">
+          </section>
+
+          <!-- <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+            <h2>... and GIFs!</h2>
+          </section> -->
+
+          <section>
+            <pre><code class="javascript" data-trim contenteditable style="font-size: 28px;">
+              >console.log("Hello, world!")
+              >test.js
+            </code></pre>
+          </section>
+
+      </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/search/search.js', async: true },
+      { src: 'plugin/zoom-js/zoom.js', async: true },
+      { src: 'plugin/notes/notes.js', async: true }
+    ]
+  });
+
+</script>
+
+</body>
+</html>
