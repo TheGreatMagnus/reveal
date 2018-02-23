@@ -4,23 +4,16 @@
 
 	<head>
 		<meta charset="utf-8">
-
-		<title>reveal.js – The HTML Presentation Framework</title>
-
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<title>reveal.js</title>
+		<!-- <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
-
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -36,29 +29,101 @@
 	</head>
 
 	<body>
-
 		<div class="reveal">
-
 <!-- Any section below this is a slide -->
       <div class="slides">
 
         <section>
-          <h3>Data Types<h3>
-            <p>strings, numbers, boolean, null, undefined, object<p>
+          <h3>Data Types</h3>
+            <p>numbers, strings, boolean, null, undefined, object<p>
         </section>
 
         <section>
-          <h3>String:</h3>
-            <p class="fragment">Any grouping of words or numbers surrounded by
-              single quotes or double quotes.  Strings are the basic structure for working with text.</p>
-        </section>
           <h3>number:</h3>
             <p class="fragment">Any number, including numbers with decimals, without quotes.
-              Allows you to work with numbers.</p>
+              Allows you to work with numbers.
+            </p>
 
-        <section>
+            <pre class="fragment">
+							<code class="javascript" data-trim contenteditable style="font-size: 28px;">
+              86.75309
+              100
+							1394
+            </code>
+					</pre>
+									<aside>
+											<p>Using console.log, print out your name and print out your age.</p>
+									</aside>
+        </section>
+
+				<section>
+          <h3>String:</h3>
+            <p class="fragment">Any grouping of text surrounded by
+              single quotes or double quotes.  Strings are the basic structure for working with text.
+            </p>
+
+            <pre class="fragment">
+							<code class="javascript" data-trim contenteditable style="font-size: 28px;">
+              "This is a String."
+              'So is this.'
+              "88"
+              '...'
+              ":)"
+            </code></pre>
 
         </section>
+
+				<section>
+					<h3>Math Operators</h3>
+						<ul>
+								<li> Add (+)</li>
+								<li>Subtract (-)</li>
+								<li>Multiply (*)</li>
+								<li>Divide (/)</li>
+						</ul>
+
+				</section>
+
+				<section>
+					<h4>How many days left in the year?</h4>
+						<pre>
+							<code class="javascript" data-trim contenteditable style="font-size: 28px;">
+								console.log(365-(31+29))
+							</code>
+						</pre>
+
+					<h4>How many feet in a 5k?</h4>
+					<pre>
+						<code class="javascript" data-trim contenteditable style="font-size: 28px;">
+							console.log(5280*3.1)
+						</code>
+					</pre>
+
+
+					<h4>Calculate how many years has it's been since the moon landing (1969)</h4>
+						<pre class="fragment">
+							<code class="javascript" data-trim contenteditable style="font-size: 28px;" class="fragment">
+								console.log(2018-1969)
+							</code>
+						</pre>
+				</section>
+
+				<section>
+					<h3>Remainder Operator  % </h3>
+					<p>The remainder operator returns the remainder left over when one operand is divided by a second operand.</p>
+
+						<pre class="fragment">
+							<code class="javascript" data-trim contenteditable style="font-size: 28px;" class="fragment">
+								12 % 5 // 2
+								-1 % 2 // -1
+								1 % 2 // 1
+								2 % 3 // 2
+								-4 % 2 // -0
+								5.5 % 2 // 1.5
+							</code>
+						</pre>
+
+				</section>
 
 
       </div>
