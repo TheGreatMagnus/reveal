@@ -33,13 +33,27 @@
 <!-- Any section below this is a slide -->
       <div class="slides">
 
+				<section data-background="http://www.yourdictionary.com/image/articles/18831.partsSpeech.jpg" data-background-size="600px">
+						<aside class="notes">
+							All words in the English language can be
+							classified as one of the eight different parts of speech.
+							Understanding the different parts of speech is important in
+							understanding how words can and should be joined together to
+							make sentences that are both grammatically correct and readable.
+							An understanding of the parts of speech is also important for knowing
+							how to correctly punctuate sentences. The eight parts of speech are nouns,
+							pronouns, verbs, adjectives, adverbs, conjunctions, prepositions, and interjections.
+						</aside>
+
+				</section>
+
         <section>
-          <h3>Data Types</h3>
-            <p>numbers, strings, boolean, null, undefined, object<p>
+          <h3>JavaScript Data Types</h3>
+            <p><b>Numbers</b>, <b>Strings</b>, Boolean, Null, Undefined, Object<p>
         </section>
 
         <section>
-          <h3>number:</h3>
+          <h3>Numbers:</h3>
             <p class="fragment">Any number, including numbers with decimals, without quotes.
               Allows you to work with numbers.
             </p>
@@ -48,35 +62,17 @@
 							<code class="javascript" data-trim contenteditable style="font-size: 28px;">
               86.75309
               100
-							1394
             </code>
 					</pre>
-									<aside>
+									<aside class="notes">
 											<p>Using console.log, print out your name and print out your age.</p>
 									</aside>
         </section>
 
 				<section>
-          <h3>String:</h3>
-            <p class="fragment">Any grouping of text surrounded by
-              single quotes or double quotes.  Strings are the basic structure for working with text.
-            </p>
-
-            <pre class="fragment">
-							<code class="javascript" data-trim contenteditable style="font-size: 28px;">
-              "This is a String."
-              'So is this.'
-              "88"
-              '...'
-              ":)"
-            </code></pre>
-
-        </section>
-
-				<section>
-					<h3>Math Operators</h3>
+					<h3>We manipulate numbers using <br><i>Math Operators</i></br></h3>
 						<ul>
-								<li> Add (+)</li>
+								<li>Add (+)</li>
 								<li>Subtract (-)</li>
 								<li>Multiply (*)</li>
 								<li>Divide (/)</li>
@@ -88,7 +84,7 @@
 					<h4>How many days left in the year?</h4>
 						<pre>
 							<code class="javascript" data-trim contenteditable style="font-size: 28px;">
-								console.log(365-(31+29))
+								console.log(365-(31+28))
 							</code>
 						</pre>
 
@@ -111,20 +107,108 @@
 				<section>
 					<h3>Remainder Operator  % </h3>
 					<p>The remainder operator returns the remainder left over when one operand is divided by a second operand.</p>
+				</section>
 
-						<pre class="fragment">
+				<section data-background="https://vignette.wikia.nocookie.net/deathbattle/images/0/0b/Wait-What-Meme-11.jpg/revision/latest?cb=20161005180110" data-background-size="600px">
+
+				<aside class="notes">
+						<pre>
 							<code class="javascript" data-trim contenteditable style="font-size: 28px;" class="fragment">
-								12 % 5 // 2
+
 								-1 % 2 // -1
 								1 % 2 // 1
 								2 % 3 // 2
 								-4 % 2 // -0
 								5.5 % 2 // 1.5
+								12 % 5 // 2
 							</code>
 						</pre>
+				</aside>
 
 				</section>
 
+				<section>
+						<p class="fragment">
+							Check if a number is divisible by another number.  If the remainder is 0, it is.
+						</p>
+						<pre class="fragment">
+							<code class="javascript" data-trim contenteditable style="font-size: 28px;" class="fragment">
+								console.log(456028 % 659)
+						  </code>
+						</pre>
+				</section>
+
+				<section>
+					<h3>The Bare Minimum</h3>
+						<ol>
+							<li>Numbers are a Data Type.</li>
+							<li>We use Math Operators (+, -, *, /, %) for calculation.</li>
+							<li>The remainder operator divides two numbers and returns the remainder.</li>
+						</ol>
+
+				</section>
+
+				<section>
+          <h3>Strings:</h3>
+            <p class="fragment">Any grouping of text surrounded by
+              single quotes or double quotes.  Strings are the basic structure for working with text.
+            </p>
+
+            <pre class="fragment">
+							<code class="javascript" data-trim contenteditable style="font-size: 28px;">
+              "This is a String."
+              'So is this.'
+              "88"
+              '...'
+              ":)"
+            </code></pre>
+
+        </section>
+
+				<section>
+					<h3>Strings + Numbers</h3>
+					<p>Concatenation: <i>verb</i>, to link together in a series or chain.  In programming, linking data types.</p>
+				</section>
+
+				<section>
+					<h3>Use the "+" operator </h3>
+					<p>The + operator does string concatenation as soon as one of its operands is a string. Then the other operand is converted to string.</p>
+					<pre class="fragment">
+						<code class="javascript" data-trim contenteditable style="font-size: 28px;" class="fragment">
+							"Say hello " + 7 + " times fast!"
+							’Say hello 7 times fast!’
+						</code>
+					</pre>
+
+							<aside class="notes">
+
+								<p>Console.log the sentence “It’s been ” + (2018-1776) + “ years since the signing of the Declaration of Independence.”
+										Is your spacing correct?
+										Seeing anything strange?
+								</p>
+							</aside>
+				</section>
+
+				<section>
+					<h3>Variable</h3>
+					<p>a way to store bits of data within a program</p>
+					<p>Declare and Assign</p>
+
+								<aside class="notes">
+									Variables: allow us to assign data to a word, then we can use that word within our program
+									instead of the data.  If you are printing out all the lyrics to a song, and the
+									lyrics were appearing several times in your code, you can save yourself time and
+									memory by assigning the data to a variable
+								</aside>
+				</section>
+
+				<section data-background="https://lh5.googleusercontent.com/TnpsGHsjD0utAROoFdch4nq3DeOI0rv6jUj3Ul0yjqPCULj95ihMcuiSlSiPlzH3t3gmfgdsxdYa3jKx6kKapO7a_EMrqHKgpLosj9MBLRveR1Z__ss=w1175"
+				data-background-size="650px">
+				</section>
+
+				<section>
+					<h3>What questions do you have?</h3>
+				</section>
 
       </div>
 
