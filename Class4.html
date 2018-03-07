@@ -1,0 +1,245 @@
+
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js</title>
+		<!-- <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+  		<div class="reveal">
+  <!-- Any section below this is a slide -->
+        <div class="slides">
+
+    <section>
+      <h3>Review</h3>
+      <ol>
+        <li>Escaping Quotes and Apostrophes in Strings</li>
+        <li>String index</li>
+        <li>Data Type: Booleans</li>
+        <li>Comparing strings: strict equality/inequality</li>
+        <li>Type coercion</li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>Before anything else...</h3>
+      <p>Create an html document (a file with .html (not .js) extension)</p>
+      <p>We will preview our code here and not in the terminal.</p>
+    </section>
+
+    <section>
+      <h3>Today</h3>
+        <ol>
+          <li>Introduction to Functions</li>
+          <li>Conditional statements</li>
+        </ol>
+    </section>
+
+    <section>
+      <h3>Functions</h3>
+      <p>At a very basic level, a function is nothing more than a wrapper for some code.  Functions...</p>
+      <ol>
+        <li>Groups statments together</li>
+        <li>Makes your code reusable</li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>Parts of a function</h3>
+      <ul>
+        <li>function keyword</li>
+        <li>name of the function (use camelCase) followed by ()</li>
+        <li>open and closing brackets that will enclose any statements {}</li>
+        <li>function call</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Two Steps to working with functions</h3>
+      <p>1.<b>Declaring a function</b>: creating a function</p>
+      <p>2.<b>Calling a function</b>: executing all the statements within a function with just one line of code.</p>
+    </section>
+
+  <section>
+    <h3>Declaring a Function</h3>
+    <img src="https://34cceb7d-a-62cb3a1a-s-sites.googlegroups.com/site/ctdjavascriptimages/function/Drawing.png?attachauth=ANoY7cpELtiMBjatSOJfAX-Yl_7eUijlBBtmkXCASOymnnLolGZuq2LR38wDGNMH1Othx-Xn9BCN4PUQxUjzfp98ZEjHE5aD87G-ecq-NaYuk5qkXlC-N8FSeF3Xxrckm4M1V9QWEsKszDq1RZXcSCL1KSsmpiNqg-Jq7o6lo-WYJP5VBQLOCv1kQlyUFEJQiy-yjOqYljFPtWGtfsWbFIUPQDm5MAAJc9bDspUeQ15IKI8WTKa6K1E%3D&attredirects=0"
+    data-background-size="600px">
+  </section>
+
+  <section>
+    <h3>Calling a function</h3>
+    <img src="https://34cceb7d-a-62cb3a1a-s-sites.googlegroups.com/site/ctdjavascriptimages/conditional/Screen%20Shot%202018-03-06%20at%2011.23.32%20AM.png?attachauth=ANoY7cqzA26JMHpGtu5AFzz1jveUZ7rnAERvz9chMBsiH3FNV06h2Vhk94tZyeSAkXuuCHJqbig4Ta9Vwt4EwRPPAk23NxP2zgJOmQ-3qjJsmiLukkMDcOm7lFM85ujo_HHeGCVixvJc_ULPJQ_0JkGDeetELiv9AERd2XWsrYsoZMj-SsOJRjoGiGCbH4qsyfxzu7httM4kkSPGmH3uo2rk7o-3zkhNmXMOXJLH4aacJGMT56pKQEMswW8LMOeCn_80LWzKH6F6neU95u78oHIVGl8X0gcUAQ%3D%3D&attredirects=0">
+  </section>
+
+  <section>
+    <p>Write the following bit of code between script tags in your html document.</p>
+    <pre>
+      <code class="javascript">
+          function sayHello() {
+            document.write('Hello!');
+          }
+          sayHello();
+      </code>
+    </pre>
+    <p>*note*  console.log is for printing things to the console.  document.write is for printing things
+    to an html document.</p>
+  </section>
+
+  <section>
+    <p>Rewriting our code as functions</p>
+    <pre>
+      <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+        function myName() {
+          var firstName = "Ramiro";
+          var lastName = "Rodriguez";
+          document.write("My name is " + firstName + " " + lastName + ".");
+        }
+        myName();
+      </code>
+    </pre>
+  </section>
+
+  <section>
+    <p>Another example</p>
+    <pre>
+      <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+        function showDistance() {
+          var speed = 55;
+          var time = 4;
+          document.write("My distance is " + speed*time + ".");
+        }
+        showDistance();
+      </code>
+    </pre>
+  </section>
+
+  <section>
+    <h3>Functions with Parameters</h3>
+    <p>Parameters: <i>noun</i>. Information. Stuff.</p>
+  </section>
+
+  <section>
+      <h3>Parameters</h3>
+      <p style="text-align:left;">1. the information the function needs to perform its task</p>
+      <p style="text-align:left;">2. parameter values are called <b>arguments</b></p>
+      <p style="text-align:left;">3. arguments can be values (i.e. specific numbers) or variables</p>
+  </section>
+
+  <section>
+    <h3>Declaring Functions that need Information</h3>
+    <img src="https://34cceb7d-a-62cb3a1a-s-sites.googlegroups.com/site/ctdjavascriptimages/conditional/Screen%20Shot%202018-03-06%20at%2012.58.21%20PM.png?attachauth=ANoY7cqHL2P_oWNq4PG8wInRV5gPIQjI5T_kac7U5z19UWGlUJSga_ZADFoYByt7V98_oSeSvX6VfyVX7Mo3tn8Wt2v3h7g3KlrhTCQbh3qBoHz7w93841wG6T7vBDmiYrBvEHGay-A19tN8Y1We461F4xCapajc9JTHdXbMnTqeWygxx-8ImL4yGt0fjBjLDC3Q9ujZZR19Ez7kQwI9-rpyE3VWEtSwyUnjh-hDofRlWuMmMKQd1lEA3iiPdV4qWI9YenTp16_EssuPNt2Uo8Zukc67_fTQWA%3D%3D&attredirects=0"
+    data-background-size="600px;">
+  </section>
+
+  <section>
+    <p>You specify your arguments to the function as part of the function call:</p>
+      <pre>
+        <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+          function showDistance(speed, time) {
+            alert(speed * time);
+          }
+          showDistance(10, 5);
+     </code>
+     </pre>
+  </section>
+
+  <section>
+    <p style ="text-align:left;">When the showDistance function gets called, the 10 corresponds to the speed argument, and the 5 corresponds to the distance argument. That mapping is entirely based on order.</p>
+    <img src="https://34cceb7d-a-62cb3a1a-s-sites.googlegroups.com/site/ctdjavascriptimages/conditional/Screen%20Shot%202018-03-06%20at%201.41.44%20PM.png?attachauth=ANoY7crXi4SWaC6ay4tAlwEqLwfMvwUUBFC6l209Zsek-haYgoCevyAYE4AIHYOEchW0QCdq3Ly22fXjFyuykaWpYgqw6HGN7RsfLlNvS37YSFo75O7QKKKBTHWr-P8jNsQocyZcmfaxyexKVo3uZ6T6O9Hb_M2eesYa5I1QO4ONzu7vFMnVWREEHHnFYCPtHJE_lXwOty4e2x5MdB9uUQXowSSOH5ol5pgKf7nqrSfyeKgAfy8ZGcA2Kq-EeJXL3LXEA6uxFxvPBS_IWvwzkjUmJHNTMIKO3w%3D%3D&attredirects=0"
+    data-background-size="600px;">
+  </section>
+
+  <section>
+    <h3>The Return Keyword</h3>
+    <p>used for returning data from a function</p>
+    <pre>
+      <code class="javascript" data-trim style="font-size: 20px;">
+        function getDistance(speed, time) {
+            var distance = speed * time;
+            return distance;
+        }
+      </code>
+    </pre>
+  </section>
+
+  <section>
+    <h3>What questions do you have?</h3>
+  </section>
+
+  <section>
+    <p style="text-align: left;">
+    Rewrite your palindrome code as a function that takes one argument.</p>
+    <p style="text-align: left;">Call the function using different words.</p>
+  </section>
+
+
+
+
+
+
+<section data-background="https://imgs.xkcd.com/comics/flowchart.png" data-background-size="400px">
+</section>
+
+<section data-background="https://34cceb7d-a-62cb3a1a-s-sites.googlegroups.com/site/ctdjavascriptimages/conditional/Screen%20Shot%202018-02-01%20at%201.05.45%20PM.png?attachauth=ANoY7cqpQmlW07NBcT_c9KJni_I9lWtg3m7Cd9XhLFkuayMaskLUzU8LFFldx9heSKPzC6H33Dd2Hd5tkNLY0vwSEZbfPXiO7VDSLMdW4kgtImoqkTvxtNmpNay6xcE7OLjOgbaSJ0wmApdW704rpwzs9wgI_EHFPknY7lEAcr444fW5vZs0cIQiKLvV4jSwUb_2xykp4QASajltWTFeAar55UPAs26mIAvjUy9DtU2VJuKa76vtu8jmzg0ZrEGk32SEjdTTGPFoiZeISmCuHBaBz38uLtFYMA%3D%3D&attredirects=0"
+  data-background-size="800px">
+</section>
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+// More info https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+
+transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+// More info https://github.com/hakimel/reveal.js#dependencies
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/search/search.js', async: true },
+{ src: 'plugin/zoom-js/zoom.js', async: true },
+{ src: 'plugin/notes/notes.js', async: true }
+]
+});
+
+</script>
+
+</body>
+</html>

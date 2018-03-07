@@ -37,24 +37,293 @@
   				<section>
   					<h3>Review</h3>
   						<ol>
-  							<li>created directories and files in c9.io</li>
-  							<li>used console.log</li>
-  							<li>pushed to github</li>
+  							<li>Data Types: Strings and Numbers</li>
+                <li>Math operators, modulus operator</li>
+  							<li>Variables: reserved words, naming conventions</li>
+  							<li>String and Number methods (toUpperCase(), toLowerCase(), length;  toFixed())</li>
   						</ol>
   				</section>
+
+          <section>
+            <h4>Warm Up</h4>
+            <p>Given 3 words, console.log() the sum of their lengths.</p>
+          </section>
+
+
+          <section>
+            <h4>Escaping Quotes and Apostrophes in Strings</h4>
+            <p>Since quotation marks are used to denote strings, special considerations must be made when using apostrophes and quotes in strings.</p>
+          </section>
+
+          <section>
+              <p>Attempting to use an apostrophe in the middle of a single-quoted string, for example,
+              will end the string, and JavaScript will attempt to parse the rest of the intended string as code.  The same would apply to attempting to use quotes in a double-quoted string.
+            </p>
+            <pre>
+              <code class="javascript fragment" data-trim contenteditable style="font-size: 28px;">
+                var brokenString = 'I'm a broken string';
+                console.log(brokenString);
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h4>Options for Escape</h4>
+            <ol>
+              <li>Opposite string syntax</li>
+              <li>Escape characters</li>
+            </ol>
+          </section>
+
+          <section>
+            <h4>Opposite string syntax</h4>
+            <pre>
+              <code class="javascript fragment" data-trim contenteditable style="font-size: 25px;">
+              "We're safely using an apostrophe in double quotes."
+            </code>
+          </pre>
+
+          <pre>
+            <code class="javascript fragment" data-trim contenteditable style="font-size: 25px;">
+              'Then he said, "Hello, World!"';
+            </code>
+          </pre>
+
+            <p class="fragment">Downside: it's tough to maintain this consistency throughout a codebase.</p>
+          </section>
+
+          <section>
+            <h4>Escape Character ( \ )</h4>
+            <p>Use \'  or \" </p>
+            <ul>
+              <li>prevents JavaScript from interpreting a quote as the end of the string</li>
+              <li>safely inserts quote without any fear of breaking the string</li>
+            </ul>
+
+            <pre>
+              <code class="javascript fragment" data-trim contenteditable style="font-size: 25px;">
+              'We\'re safely using an apostrophe in single quotes.'
+
+              "Then he said, \"Hello, World!\"";
+
+              </code>
+            </pre>
+
+          </section>
+
+          <section>
+            <pre>
+              <code class="javascript fragment" data-trim contenteditable style="font-size: 20px;">
+              "The file located at \"C:\\\\Desktop\\My Documents\\Roster\\names.txt\"
+              contains the names on the roster."
+
+              //"The file located at "C:\\Desktop\My Documents\Roster\names.txt"
+              //contains the names on the roster."
+              </code>
+            </pre>
+          </section>
+
+          <section data-background="https://imgs.xkcd.com/comics/backslashes.png" data-background-size="700px">
+
+          </section>
+
+          <section>
+            <p>Escaping special characters</p>
+            <table class="index--table--2cZjj index--table-striped--_7oVh">
+              <thead>
+              <tr>
+                <th><strong>Code</strong></th>
+                <th><strong>Character</strong></th>
+              </tr>
+              </thead>
+                <tbody>
+                <tr>
+                <td>\\</td>
+                <td>\ (backslash)</td>
+                </tr>
+                <tr>
+                <td>\"</td>
+                <td>'' (double quote)</td>
+                </tr>
+                <tr>
+                <td>\'</td>
+                <td>' (single quote)</td>
+                </tr>
+                <tr>
+                <td>\n</td>
+                <td>newline</td>
+                </tr>
+                <tr>
+                <td>\t</td>
+                <td>tab</td>
+                </tr>
+                </tbody>
+              </table>
+          </section>
+
+          <section>
+            <pre>
+              <code class="javascript fragment" data-trim contenteditable style="font-size: 20px;">
+                var sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <p>"The Light of a Candle" by Yosa Buson</p>
+            <p>"The light of a candle is transferred to another candle—spring twilight."</p>
+          </section>
+
+          <section>
+            <h4>String index</h4>
+            <p>Each of the characters in a string correspond to an index number, starting with 0</p>
+			<br />
+            <table style="margin: auto;">
+              <thead>
+                <tr>
+                <th style="text-align: center">H</th>
+                <th style="text-align: center">o</th>
+                <th style="text-align: center">w</th>
+                <th style="text-align: center"></th>
+                <th style="text-align: center">a</th>
+                <th style="text-align: center">r</th>
+                <th style="text-align: center">e</th>
+                <th style="text-align: center"></th>
+                <th style="text-align: center">y</th>
+                <th style="text-align: center">o</th>
+                <th style="text-align: center">u</th>
+                <th style="text-align: center">?</th>
+                </tr>
+                </thead>
+                  <tbody>
+                    <tr>
+                    <td style="text-align: center">0</td>
+                    <td style="text-align: center">1</td>
+                    <td style="text-align: center">2</td>
+                    <td style="text-align: center">3</td>
+                    <td style="text-align: center">4</td>
+                    <td style="text-align: center">5</td>
+                    <td style="text-align: center">6</td>
+                    <td style="text-align: center">7</td>
+                    <td style="text-align: center">8</td>
+                    <td style="text-align: center">9</td>
+                    <td style="text-align: center">10</td>
+                    <td style="text-align: center">11</td>
+                    </tr>
+                  </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h4>String Index</h4>
+            <ol>
+              <li>"string"[index]</li>
+            <pre>
+                <code class="javascript fragment" data-trim contenteditable style="font-size: 20px;">
+                  var quote = "Stay awhile and listen!";
+                  console.log(quote[6]);
+                </code>
+            </pre>
+              <li>string.charAt()</li>
+            <pre>
+                <code class="javascript fragment" data-trim contenteditable style="font-size: 20px;">
+                  var bookTitle = 'Brave New world';
+                  console.log("The character at index 4   is '" + bookTitle.charAt(4)   + "'");
+                  The character at index 4   is 'e'
+                </code>
+            </pre>
+            </ol>
+
+          </section>
+
+          <section>
+            <h4>Data Type: Boolean</h4>
+            <p>Comparing strings and strict equality...returns Boolean</p>
+            <p>Boolean:  This is always one of two words. Either true or false, with no quotations.</p>
+            <pre>
+            <code class="javascript fragment" data-trim contenteditable style="font-size: 20px;">
+              “Yes” == “yes”...is FALSE, when you compare strings case matters.
+              But, 10 == “10”...is TRUE because there is Implicit type coercion
+            </code>
+          </pre>
+          </section>
+
+          <section>
+            <h4>Implicit Type Conversion (aka: Coercion)</h4>
+            <p>Coercion: <i>noun</i> the practice of persuading someone to do something by using force or threats.</p>
+            <br />
+            <p>If you use a data type that JS did not expect, it tries to make sense of the operation rather than report an error.</p>
+          </section>
+
+            <section>
+              <pre>
+              <code class="javascript fragment" data-trim contenteditable style="font-size: 20px;">
+                console.log('1' > 0)
+                //true
+                //the string '1' is converted to a number 1
+              </code>
+            </pre>
+            <p class="fragment">Type coercion can lead to unexpected values in your code (and also cause errors).</p>
+          </section>
+
+          <section>
+          <pre>
+              <code class="javascript fragment" data-trim contenteditable style="font-size: 20px;">
+                console.log( 12 + 34)
+
+                console.log('12' + 34)
+              </code>
+          </pre>
+          </section>
+
+          <section>
+            <h4>Best practice:</h4>
+            <ol>
+              <li>Use ===  and !== to check if two values are equal</li>
+              <li>strict equality(===) and strict inquality (!==) operators will check if the <i>type</i> and the <i>value</i> is the same</li>
+            <ol>
+          </section>
+
+          <section>
+            <h4>Examples</h4>
+
+            <p>Facebook post (Udacity)</p>
+          </section>
+
+          <section>
+            <ul>
+              <p>Using string index, compare the characters in the following quotes. Return a Boolean value of TRUE, then return a Boolean value of FALSE</p>
+              <li>"The best things in life are free."</li>
+              <li>"I'm not a businessman.  I'm a business, man."</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Escaping Characters example</h4>
+              <p>Create a string that returns the following output:</p>
+              <br/>
+              <p style="text-align: left;">"Do you know how tall Shaq is?", David asked.<br/></p>
+              <p style="text-align: left;">"I couldn't even guess", I responded.<br/></p>
+              <p style="text-align: left;">He exclaimed, "He's 7'1"!"</p>
+          </section>
+
+          <section>
+            Palindromes!
+          </section>
+
+		  <section>
+            <p>reversing a string:</p>
+          <pre>
+      			<code class="javascript fragment" data-trim contenteditable style="font-size: 20px;">
+      				var word = "word";
+      				var newWord = word.split("").reverse().join("");
+            </code>
+          </pre>
+           </section>
 
         </div>
 
     </div>
-
-
-
-
-
-
-
-
-
 
   <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.js"></script>
