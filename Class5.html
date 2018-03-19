@@ -1,0 +1,246 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js</title>
+		<!-- <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+  <body>
+
+  		<div class="reveal">
+  <!-- Any section below this is a slide -->
+      <div class="slides">
+
+      <section>
+        <h4>Review</h4>
+        <ol>
+          <li>Data Types: Strings and Numbers</li>
+          <li>Math operators, modulus operator</li>
+          <li>Variables: reserved words, naming conventions</li>
+          <li>String and Number methods (toUpperCase(), toLowerCase(), length;  toFixed())</li>
+          <li>Escaping Quotes and Apostrophes in Strings</li>
+          <li>String index</li>
+          <li>Data Type: Booleans</li>
+          <li>Comparing strings: strict equality/inequality</li>
+          <li>Type coercion</li>
+          <li>Functions</li>
+       </ol>
+      </section>
+
+      <section data-background="https://i.pinimg.com/564x/6b/e4/2a/6be42a1cad8d5861638b47f0ce37e9df.jpg"
+      data-background-size="400px;">
+
+      </section>
+
+      <section>
+        <h4>Functions</h4>
+       <p>Functions are re-usable collections of statements.</p>
+      </section>
+
+      <section>
+        <p>First declare the function:</p>
+        <pre>
+          <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+              function sayMyName() {
+                  console.log('Hi Claire!');
+              }
+
+          //Then call it (as many times as you want):
+
+              sayMyName();
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h4>Arguments</h4>
+        <p>Functions can accept any number of named arguments:</p>
+
+        <pre>
+            <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+            function sayMyName(name) {
+                console.log('Hi, ' + name);
+            }
+            sayMyName('Claire');
+            sayMyName('Testy McTesterFace');
+
+            </code>
+          </pre>
+          <pre>
+            <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+              function addNumbers(num1, num2) {
+                  var result = num1 + num2;
+                  console.log(result);
+              }
+              addNumbers(7, 21);
+              addNumbers(3, 10);
+            </code>
+          </pre>
+      </section>
+
+			<section>
+        <h3>Functions with Parameters</h3>
+        <p>Parameters: <i>noun</i>. Information. Stuff.</p>
+      </section>
+
+      <section>
+          <h3>Parameters</h3>
+          <p style="text-align:left;">1. the information the function needs to perform its task</p>
+          <p style="text-align:left;">2. parameter values are called <b>arguments</b></p>
+          <p style="text-align:left;">3. arguments can be values (i.e. specific numbers) or variables</p>
+      </section>
+
+			<section>
+        <ol>
+          <li>Rewrite your palindrome code as a function that takes one argument.</li>
+          <li>Call the function using different arguments.</li>
+        </ol>
+      </section>
+
+   <section>
+     <p>Making decisions with code is called control flow.</p>
+      <img src="https://imgs.xkcd.com/comics/flowchart.png" data-background-size="800px">
+   </section>
+
+   	<section>
+     	<p style="text-align:left;">Control flow statements enable JavaScript to make decisions by executing different code based on a condition.</p>
+         <br />
+     	<p style="text-align:left">For example, is the weather cold today?</p>
+
+     		<ul>
+             <li>True: wear something warm</li>
+             <li>False: Don’t wear something warm</li>
+   	    </ul>
+     </section>
+
+     <section data-background="http://video.udacity-data.com.s3.amazonaws.com/topher/2017/January/586e9791_purchase-the-item-flowchart/purchase-the-item-flowchart.jpg"
+     data-background-size="700px">
+     </section>
+
+     <section data-background="http://www.javascripttutorial.net/wp-content/uploads/2016/08/JavaScript-if-else-statment.png"
+      data-background-size="500px">
+    </section>
+
+     <section>
+       <pre>
+ 		      <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+         			var safeToProceed = true;
+                     if (safeToProceed) {
+                         alert("You shall pass!");
+                     } else {
+                         alert("You shall not pass!");
+                     }
+         	</code>
+ 	     </pre>
+
+       <pre>
+ 		<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+ 			var safeToProceed = false;
+             if (safeToProceed) {
+                 alert("You shall pass!");
+             } else {
+                 alert("You shall not pass!");
+             }
+ 		</code>
+ 	  </pre>
+     </section>
+
+ 	<section>
+ 	<img src="http://s2.quickmeme.com/img/a7/a78ae76da19c1a0f9e0e9b2f7e6229e70bd36cf7bc5b2f29b5f8900face50234.jpg"
+              data-background-size="200px;">
+     </section>
+
+ 	<section>
+       <p>If...else statements allow you to execute certain pieces of code based on a condition, or set of conditions, being met.</p>
+ 		<pre>
+ 			<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+              if (/* this expression is true */) {
+                // run this code
+                 } else {
+                // run this code
+               }
+ 			</code>
+ 		</pre>
+     </section>
+
+     <section>
+      <ol>
+        <li>Rewrite your palindrome code as a function that takes one argument.</li>
+        <li>Call the function using different arguments.</li>
+        <li>Push to github.</li>
+        <li>Dance!</li>
+      </ol>
+    </section>
+
+   	<section>
+           <h4>Even/Odd</h4>
+         <pre>
+         		<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+         			var number = 16;
+
+                   if (number % 2 === 0) {
+                       console.log("even");
+                   } else {
+                       console.log("odd");
+                   }
+       		  </code>
+ 	      </pre>
+    </section>
+
+   </div>
+
+   </div>
+
+   <script src="lib/js/head.min.js"></script>
+   <script src="js/reveal.js"></script>
+
+   <script>
+
+   // More info https://github.com/hakimel/reveal.js#configuration
+   Reveal.initialize({
+   controls: true,
+   progress: true,
+   history: true,
+   center: true,
+
+   transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+   // More info https://github.com/hakimel/reveal.js#dependencies
+   dependencies: [
+   { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+   { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+   { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+   { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+   { src: 'plugin/search/search.js', async: true },
+   { src: 'plugin/zoom-js/zoom.js', async: true },
+   { src: 'plugin/notes/notes.js', async: true }
+   ]
+   });
+
+   </script>
+
+   </body>
+   </html>

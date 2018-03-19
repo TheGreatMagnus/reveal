@@ -1,0 +1,307 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js</title>
+		<!-- <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+<div class="reveal">
+  <!-- Any section below this is a slide -->
+      <div class="slides">
+
+      <section>
+    <h4>Hello again!</h4>
+  </section>
+
+<section>
+  <ol>
+    <h3 style="text-align: center;">Warm Up!</h3>
+    <li>What is strict equality? How does it prevent unexpected errors in code?</li><br />
+    <li>Describe 3 variable naming conventions.</li><br />
+    <li>What is a function?  Give an example.</li><br />
+  </ol>
+</section>
+
+<section>
+  <ul>
+    <h3 style="text-align: center;">Warm Up! The Sequal...</h3><br />
+    <li>Explain your "Is It Christmas?" Function</li>
+  </ul>
+</section>
+
+<section>
+  <h4>return vs console.log</h4>
+  <p class="fragment" style="text-align:left"><u>return:</u> the way to return data from a function.<p><br />
+  <p class="fragment" style="text-align:left"><u>console.log:</u> feature for debugging purposes. Used to check
+    if a value exists.  Console.log will show the value of an object and then forget about it.  If you want to hold on to the value
+    and do something with it, then you need the return keyword.<p>
+</section>
+
+<section>
+  <h4>Logical Operators AND and OR</h4>
+    <p>&&  and ||</p>
+    <ol>
+    <li>used to combine two logical expressions into one larger logical expression</li>
+    <li>if both expressions evaluate to true, then the whole expression is true</li>
+    <li>if both evaluate to false, then the whole expression is false</li>
+  </ol>
+</section>
+
+<section>
+  <pre>
+    <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+      var xPos = 300;
+      var yPos = 150;
+
+      function sendWarning(x, y) {
+          if ((x < xPos) && (y < yPos)) {
+              alert("Adjust the position");
+          } else {
+              alert("Things are fine!");
+          }
+      }
+
+      sendWarning(500, 160);
+      sendWarning(100, 100);
+      sendWarning(201, 149);
+    </code>
+  </pre>
+            <aside class="notes">
+              There are three conditions being tested here. The first one is whether x
+              is less than xPos. The second one is whether y is less than yPos. The third
+              is seeing whether the first statement and the second statement both evaluate
+              to true to allow the && operator to return a true as well. You can chain many
+              series of conditional statements together depending on what you are doing.
+              The tricky thing, besides learning what all the operators do, is to ensure
+              that each condition and subcondition is properly insulated using parentheses.
+            </aside>
+</section>
+
+<section>
+
+
+<section>
+  <h4>Truthy and Falsey</h4>
+    <p>Every value in JavaScript has an inherent boolean value. When that value is evaluated in the context of a boolean expression, the value will be transformed into that inherent boolean value.</p>
+</section>
+
+
+<section>
+      <h4>All of the falsey values:<h4>
+        <ol>
+          <li>the Boolean value false</li>
+          <li>the null type</li>
+          <li>the undefined type</li>
+          <li>the number 0</li>
+          <li>the empty string ("")</li>
+          <li>the odd value NaN (stands for "not a number", check out the NaN MDN article)</li>
+        </ol>
+    <h4>That's right, there are only six falsy values in all of JavaScript!</h4>
+</section>
+<section>
+      <h4>All the truth values</h4>
+        <ol>
+          Essentially, if it's not in the list of falsy values, then it's truthy!
+        </ol>
+</section>
+
+<section>
+  <h4>Truth Table</h4>
+    <table border="1" cellspacing="0" cellpadding="2">
+  	<tbody>
+  		<tr>
+  			<th>x</th>
+  			<th>y</th>
+  			<th>x &amp;&amp; y</th>
+  			<th>x || y</th>
+  		</tr>
+  		<tr>
+  			<td>false</td>
+  			<td>false</td>
+  			<td>false</td>
+  			<td>false</td>
+  		</tr>
+  		<tr>
+  			<td>false</td>
+  			<td>true</td>
+  			<td>false</td>
+  			<td>true</td>
+  		</tr>
+  		<tr>
+  			<td>true</td>
+  			<td>false</td>
+  			<td>false</td>
+  			<td>true</td>
+  		</tr>
+  		<tr>
+  			<td>true</td>
+  			<td>true</td>
+  			<td>true</td>
+  			<td>true</td>
+  		</tr>
+  	</tbody>
+  </table>
+</section>
+
+<section>
+<h4>Short Circuiting</h4>
+
+  <p>
+    As logical expressions are evaluated left-to-right, they are tested for possible "short-circuit" evaluation
+    using the following rules: <br />
+  </p>
+  <ol>
+    <li style="background-color: pink">false && (anything) is short-circuit evaluated to false</li><br />
+    <li style="background-color: #98FB98;">true || (anything) is short-circuit evaluated to true</li>
+  </ol>
+
+      <aside class="notes">
+        For example, in the conjunction x && y, if x evaluates to false,
+        the whole expression will be false, regardless of what the other argument
+        evaluates to. Similarly, for a disjunction x || y, if the first argument
+        evaluates to true, the whole expression will be true, regardless of
+        what the other argument evaluates to.  They short circuit (stop) as soon as they have a result,
+        but they return the value that stopped the processing (not necessarily tru or false)
+      </aside>
+
+</section>
+
+<section>
+  <p>Alternatives to chaining if/else statements</p>
+  <ol>
+    <li>Ternary operator</li>
+    <li>Switch</li>
+  </ol>
+</section>
+
+<section>
+Ternary operator
+
+<p style="text-align:left">if/else statement<p>
+  <pre>
+    <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+      var day = true;
+      if(day){
+        alert('It is daytime')
+      } else{
+        alert('It is nighttime')
+      }
+      // It is daytime
+    </code>
+  </pre>
+
+ <p style="text-align:left">rewritten using the ternary operator<p>
+  <pre>
+    <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+      var day = true; //conditon
+      alert(day ? 'It is day-time' : 'It is night-time') // It is day-time
+    </code>
+  </pre>
+</section>
+
+<section>
+  <pre>
+    <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+      var day = true; //conditon
+      alert(day ? 'It is day-time' : 'It is night-time') // It is day-time
+    </code>
+  </pre>
+
+  <pre>
+    <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+      - ? - means IF
+      - : - means Else
+    </code>
+  </pre>
+</section>
+
+<section>
+  <h4>Usage in Functions</h4>
+    <pre>
+      <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+        var dog = true;
+        function myPet(){
+          if(dog){
+            return 'How do i get it?';
+          } else {
+            return 'Get me a dog!';
+          }
+        }
+        console.log(myPet())
+        // How do i get it?
+      </code>
+    </pre>
+
+    <pre>
+      <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+        var dog = false;
+        function myPet(){
+        return dog ? 'How do i get it?' : 'Get me a dog!';
+        }
+        console.log(myPet())
+        // Get me a dog!
+      </code>
+    </pre>
+</section>
+   </div>
+
+   </div>
+
+    </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/search/search.js', async: true },
+    { src: 'plugin/zoom-js/zoom.js', async: true },
+    { src: 'plugin/notes/notes.js', async: true }
+    ]
+    });
+
+    </script>
+
+    </body>
+    </html>

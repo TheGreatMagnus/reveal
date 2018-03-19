@@ -1,0 +1,64 @@
+functions
+
+
+<section>
+  <h4>Functions</h4>
+ <p>Functions are re-usable collections of statements.</p>
+</section>
+
+<section>
+  <p>First declare the function:</p>
+  <pre>
+    <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+        function sayMyName() {
+            console.log('Hi Claire!');
+        }
+
+    //Then call it (as many times as you want):
+
+        sayMyName();
+    </code>
+  </pre>
+</section>
+
+<section>
+  <h4>Arguments</h4>
+  <p>Functions can accept any number of named arguments:</p>
+
+  <pre>
+      <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+      function sayMyName(name) {
+          console.log('Hi, ' + name);
+      }
+      sayMyName('Claire');
+      sayMyName('Testy McTesterFace');
+
+      </code>
+    </pre>
+    <pre>
+      <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+        function addNumbers(num1, num2) {
+            var result = num1 + num2;
+            console.log(result);
+        }
+        addNumbers(7, 21);
+        addNumbers(3, 10);
+      </code>
+    </pre>
+</section>
+
+<section>
+  <h4>Return Values</h4>
+  <p>The return keyword returns a value to whoever calls the function (and exits the function):</p>
+
+    <pre>
+      <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+      function addNumbers(num1, num2) {
+          var result = num1 + num2;
+          return result; // Anything after this line won't be executed
+      }
+
+      var sum = addNumbers(5, 2);
+      </code>
+    </pre>
+</section>
