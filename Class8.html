@@ -11,7 +11,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 		<!-- Printing and PDF exports -->
@@ -35,6 +35,94 @@
         <section>
           <h4>Hello again!</h4>
         </section>
+
+				<section>
+					<h4>Review</h4>
+					conditional statment syntax
+					truthy falsy : every value in JS has an inherent boolean value
+						there are 6 falsy values.  everything else is truthy.
+					ternary operator
+				</section>
+
+				<section>
+					ternary operator
+					<pre>
+				    <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+				      - ? - means IF
+				      - : - means Else
+				    </code>
+				  </pre>
+					<pre>
+			      <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+			        var dog = false;
+			        function myPet(){
+			        return dog ? 'How do i get it?' : 'Get me a dog!';
+			        }
+			        console.log(myPet())
+			        // Get me a dog!
+			      </code>
+			    </pre>
+					</section>
+
+					<section>
+						<h3>Switch statement</h3>
+						<p> A switch statement tests a value and can have many case
+							statements which defines various possible values. Statements
+							are executed from the first matched case value until a break
+							is encountered.</p>
+					</section>
+
+					<section>
+						<h4>Switch statement syntax</h4>
+						<pre>
+							<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+								swtch(some expression) {
+									case 'option 1':
+										//Do something;
+										break;
+									case 'option 2':
+										//Do something else;
+										break;
+									case 'option 3':
+										//Do yet another thing;
+										break;
+								}
+							</code>
+						</pre>
+
+					</section>
+
+					<section>
+							<pre>
+								<code class="javascript" data-trim contenteditable style="font-size: 15px;">
+									function caseInSwitch(val) {
+									  var answer = "";
+									  switch(val) {
+									    case 1:
+									      answer = "alpha";
+									      break;
+									    case 2:
+									      answer = "beta";
+									      break;
+									    default:
+									      answer = "something else";
+									  }
+										  return answer;
+										}
+										caseInSwitch(3);
+								</code>
+							</pre>
+					</section>
+
+					<section>
+						When you don't add a break statement, "falling through"...+=?
+					</section>
+
+
+				<section>
+					<h3>Bob!</h3>
+				</section>
+
 
         <section>
           <h4>Warm Up</h4>
