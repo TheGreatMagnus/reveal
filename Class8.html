@@ -37,11 +37,25 @@
         </section>
 
 				<section>
+          <h4>Warm Up</h4>
+          <p>Given a year, report if it is a leap year.</p>
+          <pre>
+            <code class="javascript" data-trim contenteditable style="font-size: 15px;">
+							1. Year should be evenly divisible by 4
+							2. AND ear should not be evenly divisible by 100
+							3. OR year should be evenly divisible by 400
+            </code>
+          </pre>
+          <p style="text-align: left">For example, 1997 is not a leap year, but 1996 is. 1900 is not a leap year, but 2000 is.</p>
+        </section>
+
+				<section>
 					<h4>Review</h4>
-					conditional statment syntax
-					truthy falsy : every value in JS has an inherent boolean value
-						there are 6 falsy values.  everything else is truthy.
-					ternary operator
+					<ol>
+						<li>conditional statment syntax</li>
+						<li>truthy, falsy </li>
+						<li>ternary operator</li>
+					</ol>
 				</section>
 
 				<section>
@@ -65,8 +79,8 @@
 					</section>
 
 					<section>
-						<h3>Switch statement</h3>
-						<p> A switch statement tests a value and can have many case
+						<h4>Switch statement</h4>
+						<p style="text-align:left;"> A switch statement tests a value and can have many case
 							statements which defines various possible values. Statements
 							are executed from the first matched case value until a break
 							is encountered.</p>
@@ -93,6 +107,7 @@
 					</section>
 
 					<section>
+						<h4>Switch statement example</h4>
 							<pre>
 								<code class="javascript" data-trim contenteditable style="font-size: 15px;">
 									function caseInSwitch(val) {
@@ -114,28 +129,10 @@
 							</pre>
 					</section>
 
-					<section>
-						When you don't add a break statement, "falling through"...+=?
-					</section>
-
-
 				<section>
-					<h3>Bob!</h3>
+					<h3>HW Review:</h3>
+					<p>Bob</p>
 				</section>
-
-
-        <section>
-          <h4>Warm Up</h4>
-          <p>Given a year, report if it is a leap year.</p>
-          <pre>
-            <code class="javascript">
-              on every year that is evenly divisible by 4
-              except every year that is evenly divisible by 100
-              unless the year is also evenly divisible by 400
-            </code>
-          </pre>
-          <p>For example, 1997 is not a leap year, but 1996 is. 1900 is not a leap year, but 2000 is.</p>
-        </section>
 
         <section>
           <h4>Loops:</h4>
@@ -145,22 +142,21 @@
         <section>
           <h4>There are 3 kinds of loops you can create:</h4>
           <ol>
-            <li>for loops</li>
             <li>while loops</li>
+						<li>for loops</li>
             <li>do...while loops</li>
           </ol>
         </section>
 
         <section>
           <h4>Intro to Loops</h4>
-            <p>While Loops: if you don’t know how many times the code should run, you can use a while loop.
-            Here the condition can be something other than a counter, and the code will continue to loop for as long as
-            the condition is true.
-            </p>
-            <p>while loops, which let us loop a block of code an unknown amount of times.
+            <p>While Loops: if you don’t know how many times the code should run, you can use a while loop.</p>
+				</section>
+
+				<section>
+            <p style="text-align:left;">
             Loops check a condition.  If it returns true, a code block will run.  Then the condition will be checked
             again and if it still returns true, the code block will run again.  It repeats until the condition returns false.</p>
-            <p>For Loops</p>
         </section>
 
         <section>
@@ -170,7 +166,7 @@
 
 				<section>
 						<pre>
-							<code data-trim contenteditable style="font-size: 15px;">
+							<code class="javascript" data-trim contenteditable style="font-size: 15px;">
 								var popLimit = 10;
 								var fish = 0;
 
@@ -178,11 +174,6 @@
 								    fish++;
 								    console.log("There's room for " + (popLimit - fish) + " more fish.");
 								}
-							</code>
-						</pre>
-
-						<pre>
-							<code>
 								//There's room for 9 more fish.
 								//There's room for 8 more fish.
 								//There's room for 7 more fish.
@@ -196,7 +187,16 @@
 
         <section>Infinite loop and crashing your browser</section>
 
-        <section>
+				<section>
+					<p style="text-align: center;">Code Challenge:</p><br />
+						<ol style="width:100%;">
+							<li>99 Bottles of Juice</li>
+							<li>Countdown, Lift Off!</li>
+							<li>Print all numbers between -10 and 19</li>
+						</ol>
+				</section>
+
+        <!-- <section>
           <h4>Practice</h4>
           <ol>
             <li>Print all numbers between -10 and 19</li>
@@ -204,7 +204,7 @@
             <li>Print all ODD numbers between 300 and 333</li>
             <li>Print ALL numbers divisible by 5 AND 3 between 5 and 50</li>
           </ol>
-        </section>
+        </section> -->
 
       </div>
 
