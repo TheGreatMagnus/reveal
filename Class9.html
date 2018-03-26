@@ -35,16 +35,57 @@
 
 			<section>
 				<h4>Review</h4>
+			</section>
 
+			<section>
+				<ol>
+					<li>
+						<p style="font-size:25px;">Write a function that returns the text and spacing of "The Red Wheelbarrow", a poem by William Carlos
+						Williams.</p>
+					</li>
+					<li>
+						<p style="font-size:25px;"> Write a function called "longestWord" that takes 3 parameters.
+						Given 3 words, "longestWord" returns which word is the longest.</p>
+					</li>
+						<pre>
+							<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+								var output = longestWord('tiger', 'duck', 'hippopotamous');
+								console.log(output); // "hippopotamous is the longest word."
+							</code>
+						</pre>
+
+					<li>
+						<p style="font-size:25px;">Write a JavaScript for loop that will iterate from 0 to 15.
+						For each iteration, it will check if the current number is odd or even,
+						and display a message to the screen.</p>
+					</li>
+					<pre>
+						<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+							Sample Output :
+							"0 is even"
+							"1 is odd"
+							"2 is even"
+						</code>
+					</pre>
+				</ol>
 			</section>
 
 			<section>
 				<h4>While loop</h4>
-
-			</section>
-
-			<section>
-				<h4>Warm Up</h4>
+				<pre>
+					<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+						var n = 0;
+						while (n <= 3) {
+						  console.log("n is now " + n);
+						  n++;
+						}
+						console.log(n);
+						//"n is now 0"
+					  //"n is now 1"
+				    //"n is now 2"
+					  //"n is now 3"
+					</code>
+				</pre>
 			</section>
 
 			<section>
@@ -75,9 +116,6 @@ For Loops:
 		Find my Seat; -->
 
 <section>
-</section>
-
-<section>
 	<h4>For Loop Syntax</h4>
 	<pre>
 		<code class="javascript" data-trim contenteditable style="font-size: 20px;">
@@ -95,19 +133,48 @@ For Loops:
 	<ol style="width: 100%;"><br/>
 		<li>initializer (var i = 1;)</li>
 		<li>test condition (i <= 50;)</li>
-		<li>updater (i++)</li>
+		<li>updater (i++, or i--)</li>
 	</ol><br />
 	<p style="text-align:left;">In a for-loop, all three parts i.e. initializer, test condition, and updater are written
 	together in a single line (called an iteration statement).</p>
 </section>
 
 <section>
-	<h4>When to Use one loop vs another</h4>
-	The great thing about for loops is that you can program them to run exactly how many times you want.
+	<h4>Loops: While vs For</h4>
+		<pre>
+			<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+				var n = 0;
+				while (n <= 3) {
+					console.log("n is now " + n);
+					n++;
+				}
+				//"n is now 0"
+				//"n is now 1"
+				//"n is now 2"
+				//"n is now 3"
+			</code>
+		</pre>
+
+		<pre>
+			<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+				for (var n = 0; n <= 3; n++) {
+  				console.log("n is now " + n);
+				}
+				//"n is now 0"
+				//"n is now 1"
+				//"n is now 2"
+				//"n is now 3"
+			</code>
+		</pre>
 </section>
 
 <section>
+	<h4>When to Use one loop vs another</h4>
+	<p>In general, you should use a <i>for loop</i> when you know how many times the loop should run.
+		If you want the loop to break based on a condition other than the number of times it runs,
+		you should use a <i>while loop</i>.</p>
 </section>
+
 
 
 
