@@ -33,8 +33,13 @@
 <!-- Any section below this is a slide -->
       <div class="slides">
 
+
 			<section>
-				re-introduction to git, the Arrays lesson, you may have to introduce prompt()
+				<ol>
+				<li>re-introduction to git</li>
+				<li>Arrays</li>
+				<li>you may have to introduce prompt()</li>
+				</ol>
 			</section>
 
 			<section>
@@ -48,13 +53,87 @@
 
 			<section>
 				<h4>Arrays</h4>
+				<p>Arrays are collection of data</p>
+			</section>
+
+			<section>
+				<ol>
+					<li>Create an array</li>
+					<li>Access values</li>
+					<li>Add values</li>
+					<li>Remove values</li>
+					<li>Find values</li>
+					<li>Merge values</li>
+				</ol>
+			</section>
+
+			<section>
+				<h4>Create an array</h4>
+				 <pre>
+					 <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+						 var groceries = [];
+						 var groceries = ["Milk", "Eggs", "Frosted Flakes", "Salami", "Juice"];
+						 //You have your variable name on the left,
+						 //and you have a pair of brackets on the right that initializes this variable as an empty array.
+						 //This is also referred to as array literal notation.
+					 </code>
+				 </pre>
+			</section>
+
+			<section>
+				<h4>Access values</h4>
+				<pre>
+					<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+						var seaCreatures = [
+						    "octopus",
+						    "squid",
+						    "shark",
+						    "seahorse",
+						    "starfish",
+						];
+					</code>
+				</pre>
+				<table>
+					<thead>
+					<tr>
+					<th style="text-align: center">octopus</th>
+					<th style="text-align: center">squid</th>
+					<th style="text-align: center">shark</th>
+					<th style="text-align: center">seahorse</th>
+					<th style="text-align: center">starfish</th>
+					</tr>
+					</thead><tbody>
+					<tr>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">2</td>
+					<td style="text-align: center">3</td>
+					<td style="text-align: center">4</td>
+					</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section>
+				<h4>Add and Remove values</h4>
+			</section>
+
+			<section>
+				<h4>Find values</h4>
+			</section>
+
+			<section>
+				<h4>Merge values</h4>
+			</section>
+
+			<section>
 				<p>but one of the greatest love stories of all time is that between a data structure known as an array
 					and the for loop. The bulk of your time, you will be using loops to travel through all of the data
 					stored in an array, so just glance through the following code and explanation.</p>
 				<pre>
 					<code class="javascript" data-trim contenteditable style="font-size: 20px;">
 						var myArray = ["one", "two", "three"];
-  
+
 						for (var i = 0; i < myArray.length; i++) {
 						    document.writeln(myArray[i]);
 						}
