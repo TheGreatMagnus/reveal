@@ -53,7 +53,11 @@
 
 			<section>
 				<h4>Arrays</h4>
-				<p>Arrays are collection of data</p>
+				<ul>
+					<li>Arrays are collection of data</li>
+					<li>Can store any data type</li>
+					<li>Can be nested (arrays inside of arrays)</li>
+				</ul>
 			</section>
 
 			<section>
@@ -82,6 +86,7 @@
 
 			<section>
 				<h4>Access values</h4>
+				<p>Each item in an array is assigned an index value.</p>
 				<pre>
 					<code class="javascript" data-trim contenteditable style="font-size: 20px;">
 						var seaCreatures = [
@@ -115,7 +120,65 @@
 			</section>
 
 			<section>
-				<h4>Add and Remove values</h4>
+				<pre>
+					<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+						var seaCreatures = [
+						    "octopus",
+						    "squid",
+						    "shark",
+						    "seahorse",
+						    "starfish",
+						];
+					</code>
+				</pre>
+				<pre>
+					<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+						seaCreatures[0];
+						//octopus
+						seaCreatures[4];
+						//starfish
+						seaCreatues[5];
+						//undefined
+
+					</code>
+				</pre>
+			</section>
+
+
+			<section>
+				<h4>Add values</h4>
+					<p>push: adds an element to the end of an arrray</p>
+					<p>unshift: adds an element to the beginning of an array</p>
+					<pre>
+						<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+							var groceries = ["milk", "bread", "cereal"];
+							groceries.push("bananas");
+							groceries.unshift("spaghetti");
+							console.log(groceries);
+							// [ 'spaghetti', 'milk', 'bread', 'cereal', 'bananas' ]
+						</code>
+					</pre>
+				<p>*note* Both the push and unshift methods,
+					besides adding the elements to the array when you use them, return the new length</p>
+			</section>
+
+			<section>
+				<h4>Remove values</h4>
+				<p>pop: removes  the last element from the array</p>
+				<p>shift: removes the first element from the array</p>
+				<pre>
+					<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+						var groceries = ["milk", "bread", "cereal"];
+						groceries.pop();
+						groceries.shift();
+						console.log(groceries);
+						// [ bread' ]
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<p>For a list of array methods, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</p>
 			</section>
 
 			<section>
@@ -124,6 +187,24 @@
 
 			<section>
 				<h4>Merge values</h4>
+				<p>concat: creates a new array that is made up of two separate arrays. </p>
+				<pre>
+					<code>
+						var good = ["Mario", "Luigi", "Kirby", "Yoshi"];
+						var bad = ["Bowser", "Koopa Troopa", "Goomba"];
+
+						var goodAndBad = good.concat(bad);
+						//[ 'Mario',
+							  'Luigi',
+							  'Kirby',
+							  'Yoshi',
+							  'Bowser',
+							  'Koopa Troopa',
+							  'Goomba' ]
+					</code>
+				</pre>
+				<p><p>Concat returns a new array that stores the results of our concatenation operation.
+					The order of the elements inside goodAndBad is good first and bad second</p>
 			</section>
 
 			<section>
