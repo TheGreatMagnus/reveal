@@ -33,9 +33,80 @@
 <!-- Any section below this is a slide -->
       <div class="slides">
 
+				<section>
+					<p>Hello again</p>
+				</section>
+
+				<section>
+					<h4>Arrays!</h4>
+					<p style="text-align: left;">An array is a collection of items that can be modified and looped over.</p>
+				</section>
+
+				<section>
+					<h4>Review</h4>
+					<ol style="width:90%;">
+						<li>Create an array: array literal notation []</li>
+						<li>Access values: 0 indexed</li>
+						<li>Add values: push and unshift</li>
+						<li>Remove values: pop and shift</li>
+						<li>Merge values: concat</li>
+					</ol>
+				</section>
+
+				<section>
+					<ol>
+						<li><b>mutator methods</b>, modify: pop(); shift(); push(); splice()  (and others!)</li>
+						<li><b>accessor methods</b>, return a new value or representation: concat(); join(); slice()</li>
+						<li><b>iteration methods:</b> methods that operate on every item in an array, one at a time. These methods are closely associated with loops.</li>
+					</ol>
+				</section>
 
 
+				<section>
+					<p>but one of the greatest love stories of all time is that between a data structure known as an array
+						and the for loop. The bulk of your time, you will be using loops to travel through all of the data
+						stored in an array, so just glance through the following code and explanation.</p>
+				</section>
 
+				<section>
+					<h4>Looping through an Array</h4>
+					<pre>
+						<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+							var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
+
+							for (var i = 0; i < donuts.length; i++) {
+							  donuts[i] += " hole";
+							  donuts[i] = donuts[i].toUpperCase();
+							  console.log(donuts[i]);
+							}
+						</code>
+					</pre>
+					<pre>
+						<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+							var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
+
+							donuts.forEach(function(donut) {
+							  donut += " hole";
+							  donut = donut.toUpperCase();
+							  console.log(donut);
+							});
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h4>method executes a provided function once for each array element</h4>
+				</section>
+
+				<section>
+					<h4>forEach() parameters</h4>
+					<p style="text-align: left;">The function that you pass to the forEach() method can take up to three parameters.</p>
+					<ol>
+						<li>element: The value of the current element being processed in the array</li>
+						<li>index: The index of the current element being processed in the array. (optional)</li>
+						<li>array: The array that forEach() is being applied to. (optional)</li>
+					</ol>
+				</section>
 
 
 
