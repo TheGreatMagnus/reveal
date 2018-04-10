@@ -54,24 +54,52 @@
 				</section>
 
 				<section>
+					<h4>Guessing game</h4>
+					<p style="text-align:left"><b>Regular mode</b>:  Give the user clues like 'Too High' or 'Too Low.'</p>
+
+					<p style="text-align:left"><b>Hard mode</b>: All of the above, after 5 incorrect guesses, the program should tell you that you lose.  It should tell you all the numbers you have guessed,
+					and what the correct answer is.</p>
+
+					<p style="text-align:left"><b>Nightmare mode</b>: All of the above, AND create a user interface for your game using html and css.</p>
+				</section>
+
+				<section>
+					<h4>Guessing game</h4>
+					<ul>
+						<li>variable</li>
+						<li>numbers</li>
+						<li>strings</li>
+						<li>conditionals</li>
+						<li>functions</li>
+						<li>arrays</li>
+						<li>html, css</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>Array methods</h4>
 					<ol>
-						<li><b>mutator methods</b>, modify: pop(); shift(); push(); splice()  (and others!)</li>
-						<li><b>accessor methods</b>, return a new value or representation: concat(); join(); slice()</li>
-						<li><b>iteration methods:</b> methods that operate on every item in an array, one at a time. These methods are closely associated with loops.</li>
+						<li><b>mutator methods</b>: modify the array. examples: pop(); shift(); push(); splice()  (and others!)</li><br />
+						<li><b>accessor methods</b>: return a new value or representation. concat(); join(); slice()</li><br />
+						<li><b>iteration methods:</b> executes a provided function once for each array element.</li>
 					</ol>
 				</section>
 
-
 				<section>
-					<p>but one of the greatest love stories of all time is that between a data structure known as an array
-						and the for loop. The bulk of your time, you will be using loops to travel through all of the data
-						stored in an array, so just glance through the following code and explanation.</p>
+					<h4>Iteration methods</h4>
+					<p style="text-align:left;"><b>iteration methods:</b> methods that operate on every item in an array, one at a time.
+						These methods are closely associated with loops.</p><br />
+					<ul>
+						<li>forEach()</li>
+						<li>map()</li>
+					</ul>
 				</section>
 
 				<section>
 					<h4>Looping through an Array</h4>
 					<pre>
 						<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+							//using a for loop
 							var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
 
 							for (var i = 0; i < donuts.length; i++) {
@@ -83,6 +111,7 @@
 					</pre>
 					<pre>
 						<code class="javascript" data-trim contenteditable style="font-size: 20px;">
+							//using forEach() method
 							var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
 
 							donuts.forEach(function(donut) {
@@ -95,7 +124,22 @@
 				</section>
 
 				<section>
-					<h4>method executes a provided function once for each array element</h4>
+					<h4>forEach() syntax</h4>
+					<pre>
+					 <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+					var fish = [ "piranha", "barracuda", "cod", "eel" ];
+
+					fish.forEach(function (individualFish){
+    				console.log(individualFish);
+					})
+
+					//output
+					piranha
+					barracuda
+					cod
+					eel
+					</code>
+				</pre>
 				</section>
 
 				<section>
@@ -108,11 +152,26 @@
 					</ol>
 				</section>
 
+				<section>
+					<h4>map()</h4>
+					<p style="text-align:left;">creates a new array with the results of a function call on each element in the array.</p>
+				</section>
 
+				<section>
+					<pre>
+					 <code class="javascript" data-trim contenteditable style="font-size: 20px;">
+							var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
 
+							var improvedDonuts = donuts.map(function(donut) {
+							  donut += " hole";
+							  donut = donut.toUpperCase();
+							  return donut;
+							});
 
-
-
+							//improvedDonuts array: ["JELLY DONUT HOLE", "CHOCOLATE DONUT HOLE", "GLAZED DONUT HOLE"]
+						</code>
+					</pre>
+				</section>
 
       </div>
 
