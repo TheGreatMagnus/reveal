@@ -34,6 +34,41 @@
       <div class="slides">
 
     <section>
+      <h4>Hello Again!</h4>
+    </section>
+
+    <section>
+      <h4>What's up?</h4>
+      <ul>
+        <li class="fragment">No final projects</li>
+        <li class="fragment">React class starts Tuesday, June 5th</li>
+        <li class="fragment">Tuesday, Thursday</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Warm Up</h4>
+      <h4>RNA Transcription</h4>
+      <p style="text-align: left;">Given a DNA strand, return its RNA complement (per RNA transcription).
+          Both DNA and RNA strands are a sequence of nucleotides.
+          The four nucleotides found in DNA are adenine (A), cytosine (C), guanine (G) and thymine (T).
+          The four nucleotides found in RNA are adenine (A), cytosine (C), guanine (G) and uracil (U).</p> <br />
+      <p style="text-align: left;">Given a DNA strand, its transcribed RNA strand is formed by replacing each nucleotide with its complement:</p>
+      <ul>
+        <li>G -> C</li>
+        <li>C -> G</li>
+        <li>T -> A</li>
+        <li>A -> U</li>
+      </ul>
+
+      <p style="text-align: left;">In pairs, write out the steps to solve this problem.  No code, only explanation.</p>
+    </section>
+
+    <section>
+      <h4>jadenCase</h4>
+    </section>
+
+    <section>
       Including JS in HTML - script tag
       You can write your JS inside a script tag in your HTML file:
       <pre>
@@ -64,10 +99,10 @@
     </section>
 
     <section>
-      What is the DOM?
-      Document Object Model - i.e. a map of our HTML document
-      Defines the logical structure of an HTML document and how it is accessed and manipulated
-      Anything found in an HTML or XML document can be accessed, changed, deleted, or added by a programmer using the DOM
+      <h4>What is the DOM?</h4>
+      <p>Document Object Model - i.e. a map of our HTML document</p><br />
+      <p>Defines the logical structure of an HTML document and how it is accessed and manipulated</p><br />
+      <p>Anything found in an HTML or XML document can be accessed, changed, deleted, or added by a programmer using the DOM</p><br />
     </section>
 
     <section data-background="https://www.teaching-materials.org/jsweb/images/domtree.png" data-background-size="200px;">
@@ -80,6 +115,129 @@
         <li>Right-click on a web page and select "Inspect Element"</li>
         <li>Shortcuts: Cmd-Opt-I (Mac), Ctrl-Shift-I (Windows)</li>
       </ul>
+    </section>
+
+    <section>
+      copy JadenCase files
+    </section>
+
+    <section>
+      <h4>Accessing the DOM</h4>
+
+    The document object is globally available in your browser.
+
+    It allows you to access and manipulate the DOM of the current web page:
+
+    Find the DOM node you want to change using an access method
+    Store this DOM node as a variable
+    Manipulate the DOM node
+    Change its attributes
+    Modify its styles
+    Give it new inner HTML
+    Append new nodes to it
+    </section>
+
+    <section>
+      DOM Access Methods
+
+    Finding DOM nodes by id:
+
+    document.getElementById(id);
+    Finding DOM nodes by tag name:
+
+    document.getElementsByTagName(tagName);
+    Finding DOM nodes by class name:
+
+    document.getElementsByClassName(className);
+    Finding DOM nodes by query selector:
+
+    document.querySelector(cssQuery);
+    document.querySelectorAll(cssQuery);
+    </section>
+
+    <section>
+      Selecting Nodes From the DOM
+      HTML:
+
+<ul id="hobby-list">
+  <li class="hobby">Playing the banjo</li>
+  <li class="hobby">Paddleboarding</li>
+</ul>
+JavaScript:
+
+// By Id
+var hobbiesList = document.getElementById('hobby-list');
+
+// By Tag Name
+var hobbies = document.getElementsByTagName('li');
+
+// By Class Name
+var alsoHobbies = document.getElementsByClassName('hobby');
+
+// By CSS Query
+var firstHobby = document.querySelector('ul li.hobby');
+var againAlsoHobbies = document.querySelectorAll('ul li.hobby');
+    </section>
+
+    <section>
+      Returning Element vs. Array of Elements
+
+getElementById() and querySelector()return a single element:
+
+var hobbiesList = document.getElementById('hobby-list');
+var firstHobby = document.querySelector('ul li.hobby');
+
+getElementsByClassName(), getElementsByTagName(), and querySelectorAll() return a collection of elements (which acts like an array):
+
+var catNames = document.querySelectorAll('ul li.catname');
+var firstCatName = catNames[0];
+    </section>
+
+    <section>
+      Manipulating a DOM Node's Styles
+      You can access and change the styles of a DOM nodes via the style property. CSS property names with a "-" must be camelCased and number properties must have a unit.
+
+      CSS:
+
+      body {
+        color: red;
+        background-color: pink;
+        padding-top: 10px;
+      }
+      Applying the Same Styles via JavaScript:
+
+      var pageNode = document.body;
+      pageNode.style.color = 'red';
+      pageNode.style.backgroundColor = 'pink';
+      pageNode.style.paddingTop = '10px';
+    </section>
+
+    <section>
+      Manipulating a DOM Node's Inner HTML
+      Each DOM node has an innerHTML attribute that contains the HTML of all its children:
+
+      var pageNode = document.body;
+      console.log(pageNode.innerHTML);
+      You can set innerHTML yourself to replace the contents of the node:
+
+      pageNode.innerHTML = "<h1>Oh, no! Everything is gone!</h1>"
+      You can also just add to the innerHTML, instead of replacing it altogether:
+
+      pageNode.innerHTML += "P.S. Please do write back.";
+    </section>
+
+    <section>
+      innerHTML vs. textContent
+      If you're only changing the actual text of a node, textContent may be a better choice.
+
+      innerHTML
+      Works in older browsers
+      More powerful: can change code
+      Less secure: allows cross-site scripting (XSS)
+      textContent
+      Doesn't work in IE8 and below
+      Faster: the browser doesn't have to parse HTML
+      More secure: won't execute code
     </section>
 
 
