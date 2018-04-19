@@ -37,11 +37,29 @@
           <h4>Hello Again</h4>
       </section>
 
+      <section>
+        <h4>What's next</h4>
+        <ul>
+          <li class="fragment">No final projects</li>
+          <li class="fragment">React class starts Tuesday, June 5th</li>
+          <li class="fragment">Tuesday, Thursday 6:30-8:30</li>
+        </ul>
+      </section>
+
       <section data-background="https://i.imgur.com/dzbQCj4.png" data-background-size="800px">
       </section>
 
       <section>
-        <h4>Warm Up</h4>
+        <h4>Warm Up!</h4>
+      </section>
+
+      <section>
+        <h4>Pig Latin</h4>
+        <p style="text-align:left;">In pairs, write out the steps to solve this problem.  No code, only explanation.</p>
+        <ul>
+          <li>Rule 1: If a word begins with a vowel sound, add an "ay" sound to the end of the word.</li><br />
+          <li>Rule 2: If a word begins with a consonant sound, move it to the end of the word, and then add an "ay" sound to the end of the word.</li>
+        </ul>
       </section>
 
       <section>
@@ -52,20 +70,35 @@
           <li>JS in a separate file and reference it from your HTML</li>
           <li>CSS in a separate file and reference it from your HTML</li>
           <li>the Document Object Model, Inspecting the DOM</li>
+          <li>Getting and Setting elements in the DOM</li>
+          <li>Setting a CSS property directly on the element </li>
         </ol>
       </section>
 
       <section>
         <h4>DOM Manipulation</h4>
-        <p></p>
-        <ol>Two Step Process
+        <p style="text-align: center;">Two Step Process</p>
+        <ol>
           <li>Select element node</li>
           <li>Use a method or property to work with that element's attributes</li>
         </ol>
-
       </section>
 
       <section>
+        <pre>
+          <code class="Javascript" data-trim contenteditable style="font-size: 20px;">
+            //selecting items
+            document.getElementById("#itemB");
+            document.getElementsByTagName("h1");
+
+            //set html text
+            document.getElementById("itemB").textContent = "so does this!"
+            document.getElementById("itemA").innerHTML = "this works!";
+
+          </code>
+        </pre>
+      </section>
+      <!-- <section>
         <h4>Selecting Individual and Multiple Elements</h4>
         <table style="border: 2px solid black; height: 20%;">
           <thead>
@@ -93,10 +126,6 @@
         </table>
       </section>
 
-      <section>
-        <p style="text-align: left;">once you have an element node you can use methods on that
-        element node to access and change its attributes</p>
-      </section>
 
       <section>
         <h4>Attribute Nodes</h4>
@@ -124,10 +153,10 @@
               <td>removes an attribute from an element node</td>
             </tr>
         </table>
-      </section>
+      </section> -->
 
       <section>
-        <h4>Manipulating a DOM Node's Styles</h4>
+        <h4>Styling DOM with JS</h4>
         <p>You can access and change the styles of a DOM node via the style property</p>
 
       <pre>
@@ -154,6 +183,43 @@
       </section>
 
       <section>
+        <h4>Today</h4>
+        <ul>
+          <li>Dynamically adding DOM element</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Creating Dom Elements</h4>
+        <p style="text-align:left;">DOM does not have to be made up of HTML elements that exist in markup.  You
+        can dynamically create and modify elements in the DOM.</p>
+      </section>
+
+      <section>
+        <h4>Creating Dom Elements</h4>
+        <ol>
+          <li>use createElement() method, store the element in a variable</li>
+          <pre>
+            <code class="Javascript" data-trim contenteditable style="font-size: 20px;">
+              var el = document.createElement("p");
+            </code>
+          </pre>
+        </ol>
+      </section>
+
+      <section>
+        <h4>Adding the new element to the dom</h4>
+        <ol>
+          <li>find an element that will act as the parent</li>
+          <li>use appendChild and add the element you want into that parent element</li>
+        </ol>
+      </section>
+
+      <section>
+        <h4>Trying this out using dev tools</h4>
+      </section>
+
+      <section>
         <h4>Forking and Cloning a Github Repository</h4>
         <ul>
           <ol><b>fork</b>: creates a copy of the repository under your github id</ol><br />
@@ -162,24 +228,11 @@
       </section>
 
       <section>
-          <h4>Forking and Cloning a Github Repository</h4>
+          <h4>Forking and Cloning a Github Repository, cont'd</h4>
         <ul>
           <ol><b>fork</b>:on github</ol>
           <ol><b>clone</b>: git clone *URL*</ol>
         </ul>
-      </section>
-
-      <section>
-        <h4>Creating Dom elements</h4>
-      </section>
-
-      <section>
-        adding nodes
-      </section>
-
-      <section>
-        can be done when click add,
-        or can be done on enter (addEventListner)
       </section>
 
   </div>
